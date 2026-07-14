@@ -1,0 +1,212 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id           String   @id @default(uuid())
+  email        String   @unique
+  password     String
+  name         String
+  role         AdminRole @default(EDITOR)
+  isActive     Boolean  @default(true)
+  lastLogin    DateTime?
+  refreshToken String?  @db.Text
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@map("admins")
+}
+
+model Job {
+  id               String        @id @default(uuid())
+  title            String
+  slug             String        @unique
+  company          String        @default("Recluta Talent Management")
+  location         String
+  jobType          JobType       @default(FULL_TIME)
+  workMode         WorkMode      @default(ON_SITE)
+  industry         String
+  department       String
+  experienceMin    Int           @default(0)
+  experienceMax    Int           @default(5)
+  salaryMin        Int?
+  salaryMax        Int?
+  salaryCurrency   String        @default("INR")
+  description      String        @db.LongText
+  requirements     String        @db.LongText
+  responsibilities String        @db.LongText
+  benefits         String?       @db.Text
+  skills           String        @db.Text
+  openings         Int           @default(1)
+  status           JobStatus     @default(ACTIVE)
+  isFeatured       Boolean       @default(false)
+  deadline         DateTime?
+  views            Int           @default(0)
+  applications     Application[]
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+
+  @@map("jobs")
+}
+
+model Application {
+  id              String            @id @default(uuid())
+  jobId           String
+  job             Job               @relation(fields: [jobId], references: [id], onDelete: Cascade)
+  firstName       String
+  lastName        String
+  email           String
+  phone           String
+  currentLocation String
+  currentCompany  String?
+  currentRole     String?
+  totalExperience Float
+  noticePeriod    String
+  expectedSalary  Int?
+  currentSalary   Int?
+  resumeUrl       String
+  resumePublicId  String?
+  coverLetter     String?           @db.Text
+  linkedinUrl     String?
+  portfolioUrl    String?
+  status          ApplicationStatus @default(PENDING)
+  notes           String?           @db.Text
+  interviewDate   DateTime?
+  rejectionReason String?           @db.Text
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+
+  @@map("applications")
+}
+
+model Candidate {
+  id              String   @id @default(uuid())
+  firstName       String
+  lastName        String
+  email           String   @unique
+  phone           String
+  location        String
+  experience      Float
+  currentRole     String?
+  skills          String   @db.Text
+  resumeUrl       String?
+  resumePublicId  String?
+  isAvailable     Boolean  @default(true)
+  expectedSalary  Int?
+  notes           String?  @db.Text
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@map("candidates")
+}
+
+model Testimonial {
+  id         String   @id @default(uuid())
+  name       String
+  role       String
+  company    String
+  content    String   @db.Text
+  rating     Int      @default(5)
+  avatarUrl  String?
+  isActive   Boolean  @default(true)
+  isFeatured Boolean  @default(false)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@map("testimonials")
+}
+
+model CompanyUpdate {
+  id          String       @id @default(uuid())
+  title       String
+  slug        String       @unique
+  content     String       @db.LongText
+  excerpt     String       @db.Text
+  category    UpdateCategory @default(NEWS)
+  imageUrl    String?
+  imagePublicId String?
+  isPublished Boolean      @default(false)
+  publishedAt DateTime?
+  author      String       @default("Recluta Team")
+  tags        String?      @db.Text
+  views       Int          @default(0)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  @@map("company_updates")
+}
+
+model ContactMessage {
+  id        String        @id @default(uuid())
+  name      String
+  email     String
+  phone     String?
+  subject   String
+  message   String        @db.Text
+  status    MessageStatus @default(UNREAD)
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+
+  @@map("contact_messages")
+}
+
+// Enums
+enum AdminRole {
+  SUPER_ADMIN
+  ADMIN
+  EDITOR
+}
+
+enum JobType {
+  FULL_TIME
+  PART_TIME
+  CONTRACT
+  INTERNSHIP
+  FREELANCE
+}
+
+enum WorkMode {
+  ON_SITE
+  REMOTE
+  HYBRID
+}
+
+enum JobStatus {
+  ACTIVE
+  PAUSED
+  CLOSED
+  DRAFT
+}
+
+enum ApplicationStatus {
+  PENDING
+  REVIEWING
+  SHORTLISTED
+  INTERVIEW_SCHEDULED
+  OFFERED
+  HIRED
+  REJECTED
+  WITHDRAWN
+}
+
+enum UpdateCategory {
+  NEWS
+  BLOG
+  ANNOUNCEMENT
+  PRESS_RELEASE
+}
+
+enum MessageStatus {
+  UNREAD
+  READ
+  REPLIED
+  ARCHIVED
+}
