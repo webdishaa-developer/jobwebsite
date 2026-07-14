@@ -2,11 +2,11 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Plus, Edit, Trash2, Star, X, Toggle } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { testimonialsApi } from '@/lib/api';
 import { Testimonial } from '@/types';
 import { cn, timeAgo } from '@/lib/utils';
+import { Plus, Edit, Trash2, Star, X } from 'lucide-react';
 
 const EMPTY = { name: '', role: '', company: '', content: '', rating: 5, isActive: true, isFeatured: false };
 
