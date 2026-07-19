@@ -7,14 +7,24 @@ import { Target, Eye, Award, Users, MapPin, Calendar, Building, CheckCircle2 } f
 const timeline = [
   { year: '2016', title: 'Founded', desc: 'Recluta Talent Management Pvt Ltd incorporated on December 24, 2020 in Bilaspur, Chhattisgarh.' },
   { year: '2018', title: 'First 500 Placements', desc: 'Successfully placed 500+ professionals across IT, BFSI and Manufacturing sectors.' },
-  { year: '2020', title: 'Pan India Expansion', desc: 'Extended operations to 10+ cities including Bangalore, Mumbai, Delhi, Hyderabad and Pune.' },
+  { year: '2020', title: 'Pan India Expansion', desc: 'Extended operations to 1000+ cities including Bangalore, Mumbai, Delhi, Hyderabad and Pune.' },
   { year: '2023', title: '200+ Clients', desc: 'Crossed 200 client companies and 300 successful placements. Expanded to bulk hiring solutions.' },
   { year: '2026', title: 'New Milestones', desc: 'Launched executive search division and IT staffing vertical. 500+ placements and counting.' },
 ];
 
 const team = [
-  { name: 'Hemanand Saha', role: 'Director & Founder', desc: 'Seasoned HR professional with extensive experience in talent acquisition and management across industries. Leads strategic operations and client partnerships.', initial: 'HS' },
-  { name: 'Ritu Saha', role: 'Director & Co-Founder', desc: 'Expert in organizational development and HR strategy. Oversees candidate experience, quality assurance, and team management at Recluta.', initial: 'RS' },
+  {
+    name: 'Our Vision',
+    role: 'Building Careers, Empowering Businesses',
+    desc: 'We connect talented professionals with the right opportunities while helping organizations build high-performing teams through trust, innovation, and excellence.',
+    initial: 'V'
+  },
+  {
+    name: 'Our Mission',
+    role: 'Committed to Excellence',
+    desc: 'We deliver reliable recruitment solutions that create meaningful careers, support business growth, and foster long-term partnerships with clients and candidates.',
+    initial: 'M'
+  },
 ];
 
 const achievements = [
@@ -75,11 +85,8 @@ export default function AboutPage() {
                 <MapPin className="w-5 h-5 text-royal-600 dark:text-royal-400 mt-0.5 flex-shrink-0" />
                 <div className="text-sm text-gray-700 dark:text-gray-300">
                   <strong>Registered Office:</strong><br />
-                  1st Floor, Kuldeep Bhavan,
-
-above IDBI ATM, Near Chhoti Railway ,<br />
-
-Line, Fafadih Raipur (C.G.) 492001
+                   <span>1st Floor, Kuldeep Bhavan, Above S K Sales , Near Raman Mandir Marg 
+                   <br /> Fafadih Raipur (C.G.) 492001</span>
                 </div>
               </div>
             </Section>
@@ -173,7 +180,7 @@ Line, Fafadih Raipur (C.G.) 492001
           <Section className="text-center mb-12">
             <span className="inline-block text-xs font-mono font-semibold tracking-widest uppercase text-cyan-600 dark:text-cyan-400 mb-3">Leadership</span>
             <h2 className="font-display text-4xl font-bold text-navy-950 dark:text-white">
-              Meet Our <span className="gradient-text">Directors</span>
+              Our Leadership<span className="gradient-text">Philosophy</span>
             </h2>
           </Section>
           <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">

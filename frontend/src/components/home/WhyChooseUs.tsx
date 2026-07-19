@@ -15,7 +15,7 @@ const reasons = [
   {
     icon: Globe2,
     title: 'Pan India Network',
-    desc: 'Active presence in 15+ cities with a database of 50,000+ pre-screened candidates across all major industries.',
+    desc: 'Active presence in 1,000+ cities with a database of 2,00,000+ pre-screened candidates across all major industries.',
     color: 'from-cyan-500 to-cyan-700',
     bgColor: 'bg-cyan-50 dark:bg-cyan-900/20',
   },
@@ -29,7 +29,7 @@ const reasons = [
   {
     icon: Zap,
     title: 'Fast Turnaround',
-    desc: 'Average position closure in 21 days. For urgent requirements, we mobilize within 48 hours.',
+    desc: 'Average position closure in 15 days. For urgent requirements, we mobilize within 48 hours.',
     color: 'from-yellow-500 to-orange-500',
     bgColor: 'bg-yellow-50 dark:bg-yellow-900/20',
   },
@@ -43,7 +43,7 @@ const reasons = [
   {
     icon: TrendingUp,
     title: '98% Success Rate',
-    desc: 'Industry-leading placement success rate with 90-day replacement guarantee on all permanent hires.',
+    desc: 'Connecting Oragnizations with top talent through efficient , reliable and result-driven recruitment solutions',
     color: 'from-purple-500 to-purple-700',
     bgColor: 'bg-purple-50 dark:bg-purple-900/20',
   },

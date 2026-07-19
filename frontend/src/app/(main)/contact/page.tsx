@@ -66,7 +66,7 @@ export default function ContactPage() {
               {[
                 {
                   icon: MapPin, title: 'Office Address',
-                  content: '1st Floor, Kuldeep Bhavan,above IDBI ATM, Near Chhoti RailwayLine, Fafadih Raipur (C.G.) 492001',
+                  content: '1st Floor, Kuldeep Bhavan, Above S K Sales , Near Raman Mandir MargFafadih Raipur (C.G.) 492001',
                   color: 'text-royal-500'
                 },
                 {

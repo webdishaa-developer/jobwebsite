@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 
 const floatingBadges = [
-  { icon: '🚀', text: '500+ Placements', position: '-top-6 -left-8' },
+  { icon: '🚀', text: '50000+ Placements', position: '-top-6 -left-8' },
   { icon: '⭐', text: '98% Success Rate', position: '-bottom-6 right-0' },
   { icon: '🏆', text: 'Pan India Network', position: 'top-1/2 -right-10' },
 ];

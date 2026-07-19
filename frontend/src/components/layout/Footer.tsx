@@ -86,11 +86,7 @@ export default function Footer() {
             <div className="space-y-3 text-sm text-gray-400">
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-cyan-400 mt-0.5 flex-shrink-0" />
-                <span>1st Floor, Kuldeep Bhavan,
-
-above IDBI ATM, Near Chhoti Railway
-
-Line, Fafadih Raipur (C.G.) 492001</span>
+                <span>1st Floor, Kuldeep Bhavan, Above S K Sales , Near Raman Mandir Marg Fafadih Raipur (C.G.) 492001</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-cyan-400 flex-shrink-0" />

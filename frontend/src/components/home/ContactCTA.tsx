@@ -52,7 +52,7 @@ export default function ContactCTA() {
               </div>
               <div className="text-left">
                 <div className="text-xs text-gray-500">Call Us</div>
-                <div className="text-sm font-semibold">+91 95222 99615</div>
+                <div className="text-sm font-semibold">+91 95222 99615 , 07714906561</div>
               </div>
             </a>
             <div className="w-px h-8 bg-white/10 hidden sm:block" />

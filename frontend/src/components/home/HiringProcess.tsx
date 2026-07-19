@@ -6,11 +6,11 @@ import { Search, FileCheck, Users, MessageSquare, CheckCircle, Handshake } from 
 
 const steps = [
   { icon: Search, step: '01', title: 'Requirement Analysis', desc: 'We understand your hiring needs, culture, and specific role requirements in depth.', color: 'text-cyan-500', bg: 'bg-cyan-50 dark:bg-cyan-900/20' },
-  { icon: FileCheck, step: '02', title: 'Talent Sourcing', desc: 'Multi-channel sourcing from our 50K+ database, job boards, and professional networks.', color: 'text-royal-500', bg: 'bg-royal-50 dark:bg-royal-900/20' },
+  { icon: FileCheck, step: '02', title: 'Talent Sourcing', desc: 'Multi-channel sourcing from our 200K+ database, job boards, and professional networks.', color: 'text-royal-500', bg: 'bg-royal-50 dark:bg-royal-900/20' },
   { icon: Users, step: '03', title: 'Screening & Shortlisting', desc: 'Rigorous technical and cultural screening. Only top 5% make it to your desk.', color: 'text-purple-500', bg: 'bg-purple-50 dark:bg-purple-900/20' },
   { icon: MessageSquare, step: '04', title: 'Client Interviews', desc: 'Coordinated interview scheduling with detailed candidate profiles and evaluation guides.', color: 'text-green-500', bg: 'bg-green-50 dark:bg-green-900/20' },
   { icon: CheckCircle, step: '05', title: 'Offer & Negotiation', desc: 'Expert salary benchmarking and negotiation support for smooth offer closure.', color: 'text-yellow-500', bg: 'bg-yellow-50 dark:bg-yellow-900/20' },
-  { icon: Handshake, step: '06', title: 'Onboarding Support', desc: '90-day replacement guarantee and post-joining support for smooth onboarding.', color: 'text-pink-500', bg: 'bg-pink-50 dark:bg-pink-900/20' },
+  { icon: Handshake, step: '06', title: 'Onboarding Support', desc: 'Streamlining the onboarding process to reduce delays and improve the candidate experince.', color: 'text-pink-500', bg: 'bg-pink-50 dark:bg-pink-900/20' },
 ];
 
 export function HiringProcess() {
