@@ -26,6 +26,14 @@ const footerLinks = {
     { label: 'Healthcare' },
     { label: 'FMCG & Retail' },
     { label: 'Infrastructure' },
+    { label: 'Paint Industry' },
+    { label: 'Retail' },
+    { label: 'Engineering' },
+    { label: 'Automobile' },
+    { label: 'Consumer Products' },
+    { label: 'E-Commerce' },
+
+
   ],
 };
 
@@ -78,11 +86,15 @@ export default function Footer() {
             <div className="space-y-3 text-sm text-gray-400">
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-cyan-400 mt-0.5 flex-shrink-0" />
-                <span>C/o Manohar Prasad Saha, Gali No.03 Bengali Para, Near Vedic Convent Sarkanda, Bilaspur, CG - 495001</span>
+                <span>1st Floor, Kuldeep Bhavan,
+
+above IDBI ATM, Near Chhoti Railway
+
+Line, Fafadih Raipur (C.G.) 492001</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                <a href="tel:+919522299615" className="hover:text-cyan-400 transition-colors">+91 95222 99615</a>
+                <a href="tel:+919522299615" className="hover:text-cyan-400 transition-colors">+91 95222 99615 , 07714906561</a>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-cyan-400 flex-shrink-0" />
@@ -158,8 +170,18 @@ export default function Footer() {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-500">
             <p>© {new Date().getFullYear()} Recluta Talent Management Pvt Ltd. All rights reserved.</p>
             <div className="flex items-center gap-1">
-              <span className="font-mono text-gray-600">CIN: U93090CT2020PTC010332</span>
-            </div>
+  <span className="font-mono text-gray-600">
+    Developed By{" "}
+    <a
+      href="https://namanjainottportfolio.netlify.app"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-600 hover:underline"
+    >
+      NAMAN JAIN
+    </a>
+  </span>
+</div>
             <div className="flex gap-4">
               <Link href="#" className="hover:text-gray-300 transition-colors">Privacy Policy</Link>
               <Link href="#" className="hover:text-gray-300 transition-colors">Terms of Use</Link>

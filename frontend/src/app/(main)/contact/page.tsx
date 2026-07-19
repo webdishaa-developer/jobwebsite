@@ -66,12 +66,12 @@ export default function ContactPage() {
               {[
                 {
                   icon: MapPin, title: 'Office Address',
-                  content: 'C/o Manohar Prasad Saha, Gali No.03 Bengali Para, Near Vedic Convent Sarkanda, Bilaspur, Chhattisgarh – 495001',
+                  content: '1st Floor, Kuldeep Bhavan,above IDBI ATM, Near Chhoti RailwayLine, Fafadih Raipur (C.G.) 492001',
                   color: 'text-royal-500'
                 },
                 {
                   icon: Phone, title: 'Phone',
-                  content: '+91 95222 99615',
+                  content: '+91 95222 99615 ,  07714906561',
                   href: 'tel:+919522299615',
                   color: 'text-green-500'
                 },

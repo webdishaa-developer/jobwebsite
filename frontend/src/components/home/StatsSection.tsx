@@ -6,12 +6,12 @@ import { useInView } from 'react-intersection-observer';
 import { Users, Briefcase, Building2, Globe, Award, Clock } from 'lucide-react';
 
 const stats = [
-  { icon: Users, value: 500, suffix: '+', label: 'Successful Placements', color: 'text-cyan-500' },
+  { icon: Users, value: 50000, suffix: '+', label: 'Successful Placements', color: 'text-cyan-500' },
   { icon: Briefcase, value: 200, suffix: '+', label: 'Partner Companies', color: 'text-royal-500' },
   { icon: Building2, value: 20, suffix: '+', label: 'Industries Covered', color: 'text-purple-500' },
-  { icon: Globe, value: 15, suffix: '+', label: 'Cities Pan India', color: 'text-green-500' },
+  { icon: Globe, value: 1000, suffix: '+', label: 'Cities Pan India', color: 'text-green-500' },
   { icon: Award, value: 98, suffix: '%', label: 'Client Satisfaction', color: 'text-yellow-500' },
-  { icon: Clock, value: 4, suffix: ' yrs', label: 'Years of Excellence', color: 'text-pink-500' },
+  { icon: Clock, value: 10, suffix: ' yrs', label: 'Years of Excellence', color: 'text-pink-500' },
 ];
 
 function CountUp({ end, suffix, started }: { end: number; suffix: string; started: boolean }) {

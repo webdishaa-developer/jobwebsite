@@ -5,11 +5,11 @@ import { useInView } from 'react-intersection-observer';
 import { Target, Eye, Award, Users, MapPin, Calendar, Building, CheckCircle2 } from 'lucide-react';
 
 const timeline = [
-  { year: '2020', title: 'Founded', desc: 'Recluta Talent Management Pvt Ltd incorporated on December 24, 2020 in Bilaspur, Chhattisgarh.' },
-  { year: '2021', title: 'First 50 Placements', desc: 'Successfully placed 50+ professionals across IT, BFSI and Manufacturing sectors.' },
-  { year: '2022', title: 'Pan India Expansion', desc: 'Extended operations to 10+ cities including Bangalore, Mumbai, Delhi, Hyderabad and Pune.' },
+  { year: '2016', title: 'Founded', desc: 'Recluta Talent Management Pvt Ltd incorporated on December 24, 2020 in Bilaspur, Chhattisgarh.' },
+  { year: '2018', title: 'First 500 Placements', desc: 'Successfully placed 500+ professionals across IT, BFSI and Manufacturing sectors.' },
+  { year: '2020', title: 'Pan India Expansion', desc: 'Extended operations to 10+ cities including Bangalore, Mumbai, Delhi, Hyderabad and Pune.' },
   { year: '2023', title: '200+ Clients', desc: 'Crossed 200 client companies and 300 successful placements. Expanded to bulk hiring solutions.' },
-  { year: '2024', title: 'New Milestones', desc: 'Launched executive search division and IT staffing vertical. 500+ placements and counting.' },
+  { year: '2026', title: 'New Milestones', desc: 'Launched executive search division and IT staffing vertical. 500+ placements and counting.' },
 ];
 
 const team = [
@@ -18,9 +18,9 @@ const team = [
 ];
 
 const achievements = [
-  { icon: Users, value: '500+', label: 'Successful Placements' },
+  { icon: Users, value: '50000+', label: 'Successful Placements' },
   { icon: Building, value: '200+', label: 'Partner Companies' },
-  { icon: MapPin, value: '15+', label: 'Cities Covered' },
+  { icon: MapPin, value: '1000+', label: 'Cities Covered' },
   { icon: Award, value: '98%', label: 'Client Satisfaction' },
 ];
 
@@ -42,17 +42,13 @@ export default function AboutPage() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <span className="inline-block text-xs font-mono font-semibold tracking-widest uppercase text-cyan-400 mb-4">About Us</span>
             <h1 className="font-display text-5xl md:text-6xl font-bold text-white mb-6">
-              Connecting <span className="gradient-text-light">India's Talent</span><br />Since 2020
+              Connecting <span className="gradient-text-light">India's Talent</span><br />Since 2016
             </h1>
             <p className="text-gray-300 text-lg max-w-2xl mx-auto leading-relaxed">
               Recluta Talent Management Pvt Ltd is a fast-growing HR consultancy providing comprehensive
               manpower recruitment and HR solutions across India.
             </p>
-            <div className="mt-6 inline-flex items-center gap-3 text-sm text-gray-400 glass px-4 py-2 rounded-full">
-              <span className="font-mono text-cyan-400">CIN:</span> U93090CT2020PTC010332
-              <span className="text-gray-600">·</span>
-              <span>Incorporated 24 Dec 2020</span>
-            </div>
+           
           </motion.div>
         </div>
       </div>
@@ -79,8 +75,11 @@ export default function AboutPage() {
                 <MapPin className="w-5 h-5 text-royal-600 dark:text-royal-400 mt-0.5 flex-shrink-0" />
                 <div className="text-sm text-gray-700 dark:text-gray-300">
                   <strong>Registered Office:</strong><br />
-                  C/o Manohar Prasad Saha, Gali No.03 Bengali Para,<br />
-                  Near Vedic Convent Sarkanda, Bilaspur, Chhattisgarh – 495001
+                  1st Floor, Kuldeep Bhavan,
+
+above IDBI ATM, Near Chhoti Railway ,<br />
+
+Line, Fafadih Raipur (C.G.) 492001
                 </div>
               </div>
             </Section>
