@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { ThemeProvider } from '@/components/shared/ThemeProvider';
 import { Toaster } from 'react-hot-toast';
-import '@/styles/globals.css';
+import  '@/styles/globals.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL(
