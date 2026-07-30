@@ -86,7 +86,7 @@ export default function Navbar() {
                   sizes="52px"
                   className="object-contain"
                   onError={() => setLogoError(true)}
-                />
+                />  
               ) : (
                 <div className="w-[52px] h-[52px] rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center shadow-lg shadow-blue-500/40">
                   <span className="text-white font-bold text-2xl">R</span>

@@ -11,11 +11,16 @@ cloudinary.config({
 // Resume upload storage
 export const resumeStorage = new CloudinaryStorage({
   cloudinary,
-  params: {
-    folder: 'recluta/resumes',
-    allowed_formats: ['pdf', 'doc', 'docx'],
-    resource_type: 'raw',
-  } as any,
+  params: async (_req, file) => {
+    const ext = file.originalname.split('.').pop();
+    const nameWithoutExt = file.originalname.replace(/\.[^/.]+$/, '').replace(/[^a-zA-Z0-9]/g, '_');
+    return {
+      folder: 'recluta/resumes',
+      resource_type: 'raw' as const,
+      public_id: `${nameWithoutExt}-${Date.now()}.${ext}`,
+      format: ext,
+    };
+  },
 });
 
 // Image upload storage
