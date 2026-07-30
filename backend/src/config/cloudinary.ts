@@ -18,7 +18,6 @@ export const resumeStorage = new CloudinaryStorage({
       folder: 'recluta/resumes',
       resource_type: 'raw' as const,
       public_id: `${nameWithoutExt}-${Date.now()}.${ext}`,
-      format: ext,
     };
   },
 });

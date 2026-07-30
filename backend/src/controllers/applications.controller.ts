@@ -143,6 +143,20 @@ export const getApplicationById = async (req: Request, res: Response, next: Next
   }
 };
 
+export const deleteApplication = async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const { id } = req.params;
+    const application = await prisma.application.findUnique({ where: { id } });
+    if (!application) return next(new AppError('Application not found', 404));
+
+    await prisma.application.delete({ where: { id } });
+
+    res.json({ success: true, message: 'Application deleted successfully' });
+  } catch (error) {
+    next(error);
+  }
+};
+
 export const updateApplicationStatus = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const { id } = req.params;

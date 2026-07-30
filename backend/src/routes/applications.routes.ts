@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import {
   createApplication, getAllApplications, getApplicationById,
-  updateApplicationStatus, getApplicationStats,
+  updateApplicationStatus, getApplicationStats, deleteApplication,
 } from '../controllers/applications.controller';
 import { protect } from '../middleware/auth.middleware';
 import { uploadResume } from '../config/cloudinary';
@@ -17,5 +17,6 @@ router.get('/', getAllApplications);
 router.get('/stats', getApplicationStats);
 router.get('/:id', getApplicationById);
 router.patch('/:id/status', updateApplicationStatus);
+router.delete('/:id', deleteApplication);
 
 export default router;

@@ -121,14 +121,16 @@ export default function ContactPage() {
               {/* Map embed */}
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="rounded-xl overflow-hidden h-48 border border-gray-200 dark:border-navy-700">
                 <iframe
-                  title="Recluta Office Location"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.2855572070434!2d81.63415117460697!3d21.260161279791753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dd858b562ddf%3A0x87f1be568b263117!2sMilestone%20job!5e0!3m2!1sen!2sin!4v1785434139698!5m2!1sen!2sin"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                />
+  title="Recluta Office Location"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.2855572070434!2d81.63415117460697!3d21.260161279791753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dd858b562ddf%3A0x87f1be568b263117!2sMilestone%20job!5e0!3m2!1sen!2sin!4v1785435172146!5m2!1sen!2sin"
+  width="100%"
+  height="100%"
+  style={{ border: 0 }}
+  allowFullScreen
+  loading="lazy"
+  referrerPolicy="strict-origin-when-cross-origin"
+/>
+
               </motion.div>
             </div>
 

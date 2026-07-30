@@ -54,6 +54,7 @@ export const applicationsApi = {
   getAll: (params?: Record<string, any>) => api.get('/applications', { params }),
   getById: (id: string) => api.get(`/applications/${id}`),
   updateStatus: (id: string, data: any) => api.patch(`/applications/${id}/status`, data),
+  delete: (id: string) => api.delete(`/applications/${id}`),
   getStats: () => api.get('/applications/stats'),
 };
 

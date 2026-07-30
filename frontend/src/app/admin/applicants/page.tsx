@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Eye, X, Download, ChevronDown, Filter } from 'lucide-react';
+import { Search, Eye, X, Download, ChevronDown, Filter, Trash2 } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { applicationsApi } from '@/lib/api';
 import { Application, ApplicationStatus } from '@/types';
@@ -19,6 +19,8 @@ export default function AdminApplicantsPage() {
   const [page, setPage] = useState(1);
   const [selectedApp, setSelectedApp] = useState<Application | null>(null);
   const [updatingStatus, setUpdatingStatus] = useState(false);
+  const [deleteConfirm, setDeleteConfirm] = useState<string | null>(null);
+  const [deleting, setDeleting] = useState(false);
   const [newStatus, setNewStatus] = useState('');
   const [notes, setNotes] = useState('');
   const [interviewDate, setInterviewDate] = useState('');
@@ -56,6 +58,17 @@ export default function AdminApplicantsPage() {
       fetchApplications();
     } catch { toast.error('Failed to update status'); }
     finally { setUpdatingStatus(false); }
+  };
+  const handleDelete = async (id: string) => {
+    setDeleting(true);
+    try {
+      await applicationsApi.delete(id);
+      toast.success('Application deleted');
+      setDeleteConfirm(null);
+      setSelectedApp(null);
+      fetchApplications();
+    } catch { toast.error('Failed to delete application'); }
+    finally { setDeleting(false); }
   };
 
   return (
@@ -135,9 +148,14 @@ export default function AdminApplicantsPage() {
                   </td>
                   <td className="px-5 py-4 text-sm text-gray-500 dark:text-gray-400 hidden md:table-cell">{timeAgo(app.createdAt)}</td>
                   <td className="px-5 py-4">
-                    <button onClick={() => openDetail(app)} className="p-1.5 rounded-lg text-gray-400 hover:text-royal-600 hover:bg-royal-50 dark:hover:bg-royal-900/20 transition-colors">
-                      <Eye className="w-3.5 h-3.5" />
-                    </button>
+                    <div className="flex items-center gap-1 justify-end">
+                      <button onClick={() => openDetail(app)} className="p-1.5 rounded-lg text-gray-400 hover:text-royal-600 hover:bg-royal-50 dark:hover:bg-royal-900/20 transition-colors">
+                        <Eye className="w-3.5 h-3.5" />
+                      </button>
+                      <button onClick={() => setDeleteConfirm(app.id)} className="p-1.5 rounded-lg text-gray-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors">
+                        <Trash2 className="w-3.5 h-3.5" />
+                      </button>
+                    </div>
                   </td>
                 </tr>
               ))}
@@ -232,6 +250,24 @@ export default function AdminApplicantsPage() {
                     {updatingStatus ? 'Updating...' : 'Update Status & Save'}
                   </button>
                 </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Delete confirm */}
+      <AnimatePresence>
+        {deleteConfirm && (
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50">
+            <motion.div initial={{ scale: 0.9 }} animate={{ scale: 1 }} exit={{ scale: 0.9 }} className="bg-white dark:bg-navy-900 rounded-2xl p-6 max-w-sm w-full border border-gray-200 dark:border-navy-700 shadow-2xl">
+              <h3 className="font-display text-lg font-bold text-navy-950 dark:text-white mb-2">Delete Application?</h3>
+              <p className="text-gray-500 dark:text-gray-400 text-sm mb-5">This will permanently delete this applicant's data and resume. This action cannot be undone.</p>
+              <div className="flex gap-3">
+                <button onClick={() => handleDelete(deleteConfirm)} disabled={deleting} className="flex-1 py-2.5 rounded-xl bg-red-500 hover:bg-red-600 disabled:opacity-60 text-white font-semibold transition-colors">
+                  {deleting ? 'Deleting...' : 'Delete'}
+                </button>
+                <button onClick={() => setDeleteConfirm(null)} className="flex-1 btn-secondary">Cancel</button>
               </div>
             </motion.div>
           </motion.div>
