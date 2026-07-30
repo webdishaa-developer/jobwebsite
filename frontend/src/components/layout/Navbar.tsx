@@ -78,15 +78,13 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-3 flex-shrink-0">
             <div className="relative flex-shrink-0" style={{ width: 52, height: 52 }}>
               {!logoError ? (
-                <Image
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
                   src="/logo.png"
                   alt="Recluta Logo"
-                  fill
-                  priority
-                  sizes="52px"
-                  className="object-contain"
+                  className="w-full h-full object-contain"
                   onError={() => setLogoError(true)}
-                />  
+                />
               ) : (
                 <div className="w-[52px] h-[52px] rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center shadow-lg shadow-blue-500/40">
                   <span className="text-white font-bold text-2xl">R</span>
