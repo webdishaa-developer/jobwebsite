@@ -190,12 +190,18 @@ export default function AdminApplicantsPage() {
                   ))}
                 </div>
 
-                {/* Resume link */}
+                {/* Resume links */}
                 {selectedApp.resumeUrl && (
-                  <a href={selectedApp.resumeUrl} target="_blank" rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-3 bg-royal-50 dark:bg-royal-900/20 rounded-xl text-sm text-royal-600 dark:text-royal-400 hover:bg-royal-100 dark:hover:bg-royal-900/40 transition-colors">
-                    <Download className="w-4 h-4" /> View / Download Resume
-                  </a>
+                  <div className="flex gap-3">
+                    <a href={selectedApp.resumeUrl} target="_blank" rel="noopener noreferrer"
+                      className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-royal-50 dark:bg-royal-900/20 rounded-xl text-sm text-royal-600 dark:text-royal-400 hover:bg-royal-100 dark:hover:bg-royal-900/40 transition-colors">
+                      <Eye className="w-4 h-4" /> View Resume
+                    </a>
+                    <a href={selectedApp.resumeUrl.replace('/upload/', '/upload/fl_attachment/')}
+                      className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gray-50 dark:bg-navy-800 rounded-xl text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-navy-700 transition-colors">
+                      <Download className="w-4 h-4" /> Download
+                    </a>
+                  </div>
                 )}
 
                 {/* Cover letter */}
