@@ -67,9 +67,8 @@ export default function Navbar() {
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        scrolled
-          ? 'bg-[#04080f]/95 backdrop-blur-xl shadow-2xl border-b border-white/5'
-          : 'bg-transparent'
+        'bg-[#04080f]/95 backdrop-blur-xl border-b border-white/5',
+        scrolled ? 'shadow-2xl' : 'shadow-none'
       )}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -86,9 +85,6 @@ export default function Navbar() {
                   priority
                   sizes="52px"
                   className="object-contain"
-                  style={{
-                    filter: 'brightness(1.2) drop-shadow(0 0 10px rgba(6,182,212,0.6))',
-                  }}
                   onError={() => setLogoError(true)}
                 />
               ) : (
