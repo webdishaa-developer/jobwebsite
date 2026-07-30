@@ -60,11 +60,14 @@ export default function AdminJobsPage() {
     }
     setSaving(true);
     try {
+      // Strip out fields that shouldn't be sent to the backend
+      const { id, _count, createdAt, updatedAt, views, applications, ...cleanData } = formData;
+
       if (editingJob) {
-        await jobsApi.update(editingJob.id, formData);
+        await jobsApi.update(editingJob.id, cleanData);
         toast.success('Job updated successfully');
       } else {
-        await jobsApi.create(formData);
+        await jobsApi.create(cleanData);
         toast.success('Job created successfully');
       }
       setShowModal(false);
