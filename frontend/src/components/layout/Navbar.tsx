@@ -76,26 +76,27 @@ export default function Navbar() {
 
           {/* LOGO */}
           <Link href="/" className="flex items-center gap-3 flex-shrink-0">
-            <div className="relative flex-shrink-0" style={{ width: 52, height: 52 }}>
+            <div className="relative flex-shrink-0" style={{ width: 76, height: 76 }}>
               {!logoError ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
                   src="/logo.png"
                   alt="Recluta Logo"
                   className="w-full h-full object-contain"
+                  style={{ filter: 'drop-shadow(0 0 12px rgba(6,182,212,0.5))' }}
                   onError={() => setLogoError(true)}
                 />
               ) : (
-                <div className="w-[52px] h-[52px] rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center shadow-lg shadow-blue-500/40">
-                  <span className="text-white font-bold text-2xl">R</span>
+                <div className="w-[76px] h-[76px] rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center shadow-lg shadow-blue-500/40">
+                  <span className="text-white font-bold text-3xl">R</span>
                 </div>
               )}
             </div>
             <div className="leading-none">
-              <span className="block font-extrabold text-[19px] tracking-tight text-white leading-none">
+              <span className="block font-extrabold text-[22px] tracking-tight text-white leading-none">
                 RECLUTA
               </span>
-              <span className="block text-[9px] tracking-[0.24em] uppercase text-cyan-400 mt-[5px] leading-none font-medium">
+              <span className="block text-[10px] tracking-[0.24em] uppercase text-cyan-400 mt-[6px] leading-none font-medium">
                 Talent Management
               </span>
             </div>

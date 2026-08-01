@@ -80,8 +80,6 @@ export default function ContactPage() {
                   content: 'info@reclutasolutions.in',
                   href: 'mailto:info@reclutasolutions.in',
                   color: 'text-cyan-500',
-                  sub: 'hemanand.saha@gmail.com',
-                  subHref: 'mailto:hemanand.saha@gmail.com'
                 },
                 {
                   icon: Clock, title: 'Business Hours',
@@ -107,13 +105,7 @@ export default function ContactPage() {
                     ) : (
                       <div className="text-sm font-medium text-navy-950 dark:text-white">{item.content}</div>
                     )}
-                    {item.sub && (
-                      item.subHref ? (
-                        <a href={item.subHref} className="text-xs text-gray-500 dark:text-gray-400 hover:text-royal-600 dark:hover:text-cyan-400 block mt-0.5 transition-colors">{item.sub}</a>
-                      ) : (
-                        <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{item.sub}</div>
-                      )
-                    )}
+                   
                   </div>
                 </motion.div>
               ))}

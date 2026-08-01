@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer';
 import { Target, Eye, Award, Users, MapPin, Calendar, Building, CheckCircle2 } from 'lucide-react';
 
 const timeline = [
-  { year: '2016', title: 'Founded', desc: 'Recluta Talent Management Pvt Ltd incorporated on December 24, 2020 in Bilaspur, Chhattisgarh.' },
+  { year: '2016', title: 'Founded', desc: 'Recluta Talent Management Pvt Ltd incorporated on December 24, 2016 in Raipur, Chhattisgarh.' },
   { year: '2018', title: 'First 500 Placements', desc: 'Successfully placed 500+ professionals across IT, BFSI and Manufacturing sectors.' },
   { year: '2020', title: 'Pan India Expansion', desc: 'Extended operations to 1000+ cities including Bangalore, Mumbai, Delhi, Hyderabad and Pune.' },
   { year: '2023', title: '200+ Clients', desc: 'Crossed 200 client companies and 300 successful placements. Expanded to bulk hiring solutions.' },

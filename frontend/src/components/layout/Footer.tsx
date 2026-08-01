@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Linkedin, Twitter, Facebook, Instagram, Briefcase, ArrowRight, ExternalLink } from 'lucide-react';
+import { MapPin, Phone, Mail, Linkedin, Twitter, Facebook, Instagram, ArrowRight, ExternalLink } from 'lucide-react';
 
 const footerLinks = {
   company: [
@@ -70,8 +70,14 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2.5 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-royal-600 to-cyan-500 flex items-center justify-center">
-                <Briefcase className="w-5 h-5 text-white" />
+              <div className="relative flex-shrink-0" style={{ width: 56, height: 56 }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/logo.png"
+                  alt="Recluta Logo"
+                  className="w-full h-full object-contain"
+                  style={{ filter: 'drop-shadow(0 0 10px rgba(6,182,212,0.5))' }}
+                />
               </div>
               <div>
                 <div className="font-display font-bold text-xl leading-none">RECLUTA</div>
@@ -99,9 +105,9 @@ export default function Footer() {
             </div>
             <div className="flex gap-3 mt-6">
               {[
-                { Icon: Linkedin, href: '#' },
-                { Icon: Twitter, href: '#' },
-                { Icon: Facebook, href: '#' },
+                { Icon: Linkedin, href: 'https://in.linkedin.com/in/milestone-job-consultant-2076a7129' },
+                { Icon: Twitter, href: 'https://milestonejob.com/#' },
+                { Icon: Facebook, href: 'https://www.facebook.com/Milestonejob/' },
                 { Icon: Instagram, href: '#' },
               ].map(({ Icon, href }, i) => (
                 <a
