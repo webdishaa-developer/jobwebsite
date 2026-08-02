@@ -71,12 +71,12 @@ export default function Navbar() {
         scrolled ? 'shadow-2xl' : 'shadow-none'
       )}
     >
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="h-[72px] flex items-center justify-between gap-4">
+      <nav className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="h-[64px] sm:h-[72px] flex items-center justify-between gap-2 sm:gap-4">
 
           {/* LOGO */}
           <Link href="/" className="flex items-center gap-3 flex-shrink-0">
-            <div className="relative flex-shrink-0" style={{ width: 76, height: 76 }}>
+            <div className="relative flex-shrink-0 w-11 h-11 sm:w-14 sm:h-14 lg:w-[76px] lg:h-[76px]">
               {!logoError ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
@@ -87,16 +87,16 @@ export default function Navbar() {
                   onError={() => setLogoError(true)}
                 />
               ) : (
-                <div className="w-[76px] h-[76px] rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center shadow-lg shadow-blue-500/40">
-                  <span className="text-white font-bold text-3xl">R</span>
+                <div className="w-full h-full rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center shadow-lg shadow-blue-500/40">
+                  <span className="text-white font-bold text-xl sm:text-2xl lg:text-3xl">R</span>
                 </div>
               )}
             </div>
-            <div className="leading-none">
-              <span className="block font-extrabold text-[22px] tracking-tight text-white leading-none">
+            <div className="leading-none hidden sm:block">
+              <span className="block font-extrabold text-[15px] sm:text-[18px] lg:text-[22px] tracking-tight text-white leading-none">
                 RECLUTA
               </span>
-              <span className="block text-[10px] tracking-[0.24em] uppercase text-cyan-400 mt-[6px] leading-none font-medium">
+              <span className="block text-[7px] sm:text-[9px] lg:text-[10px] tracking-[0.2em] uppercase text-cyan-400 mt-[3px] lg:mt-[6px] leading-none font-medium">
                 Talent Management
               </span>
             </div>
@@ -158,7 +158,7 @@ export default function Navbar() {
           </div>
 
           {/* RIGHT ACTIONS */}
-          <div className="flex items-center gap-2 flex-shrink-0">
+          <div className="flex items-center gap-1 sm:gap-2 flex-shrink-0">
             <button
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
               className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/8 transition-all"
@@ -176,7 +176,7 @@ export default function Navbar() {
 
             <Link
               href="/jobs"
-              className="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded-lg font-semibold text-sm transition-all shadow-lg shadow-blue-600/30 hover:-translate-y-0.5 active:translate-y-0 whitespace-nowrap"
+              className="hidden sm:inline-flex bg-blue-600 hover:bg-blue-500 text-white px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg font-semibold text-xs sm:text-sm transition-all shadow-lg shadow-blue-600/30 hover:-translate-y-0.5 active:translate-y-0 whitespace-nowrap"
             >
               Find Jobs
             </Link>

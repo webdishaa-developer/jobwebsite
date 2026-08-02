@@ -67,19 +67,13 @@ export default function CareersPage() {
           </Section>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, i) => (
-              <Section key={benefit.title}>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  className="glass-card rounded-2xl p-6 card-hover group"
-                  style={{ transitionDelay: `${i * 0.1}s` }}
-                >
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-royal-100 to-cyan-100 dark:from-royal-900/40 dark:to-cyan-900/40 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <benefit.icon className="w-6 h-6 text-royal-600 dark:text-cyan-400" />
-                  </div>
-                  <h3 className="font-display text-lg font-bold text-navy-950 dark:text-white mb-2">{benefit.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{benefit.desc}</p>
-                </motion.div>
-              </Section>
+              <div key={benefit.title} className="glass-card rounded-2xl p-6 card-hover group">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-royal-100 to-cyan-100 dark:from-royal-900/40 dark:to-cyan-900/40 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <benefit.icon className="w-6 h-6 text-royal-600 dark:text-cyan-400" />
+                </div>
+                <h3 className="font-display text-lg font-bold text-navy-950 dark:text-white mb-2">{benefit.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{benefit.desc}</p>
+              </div>
             ))}
           </div>
         </div>

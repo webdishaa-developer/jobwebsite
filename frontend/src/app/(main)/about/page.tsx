@@ -28,7 +28,7 @@ const team = [
 ];
 
 const achievements = [
-  { icon: Users, value: '50000+', label: 'Successful Placements' },
+  { icon: Users, value: '5000+', label: 'Successful Placements' },
   { icon: Building, value: '200+', label: 'Partner Companies' },
   { icon: MapPin, value: '1000+', label: 'Cities Covered' },
   { icon: Award, value: '98%', label: 'Client Satisfaction' },
@@ -73,12 +73,12 @@ export default function AboutPage() {
                 Your Trusted <span className="gradient-text">HR Partner</span>
               </h2>
               <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-                Founded in December 2020, Recluta Talent Management Pvt Ltd has rapidly grown to become one of
+                Founded in December 2016, Recluta Talent Management Pvt Ltd has rapidly grown to become one of
                 India's trusted HR consultancies. We specialize in connecting exceptional talent with leading
                 organizations across diverse industries.
               </p>
               <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-                Based in Bilaspur, Chhattisgarh with pan-India reach, we serve organizations from startups to
+                Based in Raipur, Chhattisgarh with pan-India reach, we serve organizations from startups to
                 Fortune 500 companies, providing end-to-end talent management solutions tailored to their unique needs.
               </p>
               <div className="flex items-start gap-3 p-4 bg-royal-50 dark:bg-royal-900/20 rounded-xl border border-royal-100 dark:border-royal-900/50">

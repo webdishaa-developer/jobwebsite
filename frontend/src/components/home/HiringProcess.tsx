@@ -46,13 +46,15 @@ export function HiringProcess() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="relative group"
+                className="relative group pt-2"
               >
-                <div className={`flex items-center justify-center w-16 h-16 rounded-2xl ${step.bg} mb-4 group-hover:scale-110 transition-transform duration-300 relative z-10`}>
-                  <step.icon className={`w-7 h-7 ${step.color}`} />
-                </div>
-                <div className="absolute top-0 -left-2 font-display font-black text-6xl text-gray-100 dark:text-navy-800 leading-none select-none">
-                  {step.step}
+                <div className="flex items-center gap-4 mb-4">
+                  <div className={`flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-2xl ${step.bg} group-hover:scale-110 transition-transform duration-300 flex-shrink-0 relative z-10`}>
+                    <step.icon className={`w-6 h-6 sm:w-7 sm:h-7 ${step.color}`} />
+                  </div>
+                  <span className="font-display font-black text-3xl sm:text-4xl text-gray-200 dark:text-navy-700 leading-none select-none">
+                    {step.step}
+                  </span>
                 </div>
                 <h3 className="font-display text-lg font-bold text-navy-950 dark:text-white mb-2">{step.title}</h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{step.desc}</p>
